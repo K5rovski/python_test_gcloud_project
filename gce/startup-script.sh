@@ -38,7 +38,7 @@ chown -R pythonapp:pythonapp /opt/app
 cat >/etc/supervisor/conf.d/python-app.conf << EOF
 [program:pythonapp]
 directory=/opt/app/
-command=/opt/app/env/bin/gunicorn handlers:app --bind 0.0.0.0:8080
+command=/opt/app/env/bin/gunicorn handlers:app --bind 0.0.0.0:8080 --error-logfile errlog.log
 autostart=true
 autorestart=true
 user=pythonapp
