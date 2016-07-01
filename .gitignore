@@ -5,3 +5,38 @@ machinelearning/vocabulary100000.txt
 bs4/.DS_Store
 lib/flask/testsuite/test_apps/lib/python2.5/.DS_Store
 lib/flask/testsuite/test_apps/lib/python2.5/site-packages/.DS_Store
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+*.log
+
+lib/
+*.internal
+/secrets.tar.gz
+/secrets.tar
+/client-secret.json
+/service-account.json
+/config.py

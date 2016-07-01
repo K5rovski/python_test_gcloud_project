@@ -8,6 +8,12 @@ from flask import  Response
 import crawler
 
 app = Flask(__name__)
+
+
+if __name__=='__main__':
+    app.run(host='127.0.0.1', port=8080, debug=True)
+
+
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
 from machinelearning import naivebayes_classification, classification, clustering
@@ -922,3 +928,4 @@ def fetchText():
 
 
     return Response(str, mimetype='text/plain')
+	
