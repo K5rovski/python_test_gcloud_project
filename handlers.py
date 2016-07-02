@@ -1,6 +1,11 @@
 #encoding=utf-8
-import re
+import re,sys
 import json
+
+# sys.path.insert(0,r'C:\Program Files (x86)\Google\google_appengine')
+
+# if 'google' in sys.modules:           
+    # del sys.modules['google']
 
 from flask import Flask
 from flask import  Response
@@ -10,8 +15,6 @@ import crawler
 app = Flask(__name__)
 
 
-if __name__=='__main__':
-    app.run(host='127.0.0.1', port=8080, debug=True)
 
 
 # Note: We don't need to call run() since our application is embedded within
@@ -929,3 +932,6 @@ def fetchText():
 
     return Response(str, mimetype='text/plain')
 	
+
+if __name__=='__main__':
+    app.run(host='127.0.0.1', port=8080, debug=True)
