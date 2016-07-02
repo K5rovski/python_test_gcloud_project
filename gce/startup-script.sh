@@ -39,10 +39,10 @@ chown -R pythonapp:pythonapp /opt/app
 
 
 # For appengine 
-sudo wget -P /home/pythonapp https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.38.zip
+# sudo wget -P /home/pythonapp https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.38.zip
 
-sudo unzip /home/pythonapp/google_appengine_1.9.38.zip -d /home/pythonapp
-export PYTHONPATH=$PYTHONPATH:/home/pythonapp/google_appengine/
+# sudo unzip /home/pythonapp/google_appengine_1.9.38.zip -d /home/pythonapp
+# export PYTHONPATH=$PYTHONPATH:/home/pythonapp/google_appengine/
 
 # Configure supervisor to start gunicorn inside of our virtualenv and run the
 # applicaiton.
