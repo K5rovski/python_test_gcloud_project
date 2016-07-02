@@ -13,8 +13,7 @@ apt-get update
 apt-get install -yq \
     git build-essential supervisor python python-dev python-pip libffi-dev \
     libssl-dev unzip
-	
-	
+
 
 # Create a pythonapp user. The application will run as this user.
 useradd -m -d /home/pythonapp pythonapp
