@@ -4,8 +4,10 @@ import json
 
 # sys.path.insert(0,r'C:\Program Files (x86)\Google\google_appengine')
 
-# if 'google' in sys.modules:           
-    # del sys.modules['google']
+if 'google' in sys.modules:           
+    del sys.modules['google']
+# print sys.modules['google']
+
 
 from flask import Flask
 from flask import  Response
@@ -13,7 +15,6 @@ from flask import  Response
 import crawler
 
 app = Flask(__name__)
-
 
 
 
