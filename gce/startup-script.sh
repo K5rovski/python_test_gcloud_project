@@ -23,11 +23,7 @@ useradd -m -d /home/pythonapp pythonapp
 pip install --upgrade pip virtualenv
 
 
-# For appengine 
-sudo wget -P /home/pythonapp https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.38.zip
 
-sudo unzip /home/pythonapp/google_appengine_1.9.38.zip -d /home/pythonapp
-export PYTHONPATH=$PYTHONPATH:/home/pythonapp/google_appengine/
 
 # Get the source code from the Google Cloud Repository
 # git requires $HOME and it's not set during the startup script.
@@ -41,6 +37,13 @@ virtualenv /opt/app/env
 
 # Make sure the pythonapp user owns the application code
 chown -R pythonapp:pythonapp /opt/app
+
+
+# For appengine 
+sudo wget -P /home/pythonapp https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.38.zip
+
+sudo unzip /home/pythonapp/google_appengine_1.9.38.zip -d /home/pythonapp
+export PYTHONPATH=$PYTHONPATH:/home/pythonapp/google_appengine/
 
 # Configure supervisor to start gunicorn inside of our virtualenv and run the
 # applicaiton.
