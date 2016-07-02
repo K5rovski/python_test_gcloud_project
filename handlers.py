@@ -17,6 +17,9 @@ import crawler
 app = Flask(__name__)
 
 
+import config
+
+app.config.from_object(config)
 
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
@@ -49,6 +52,10 @@ def hello():
     return 'No te procupas, compadre!'
 
 
+@app.route('/test_datastore')
+def test_datastore():
+	retlis=crawler.temp_news()
+	return str(retlis)
 #----- checked -----
 # function that crawls the web-pages and extracts information
 @app.route('/crawl_me_some_pages')

@@ -11,6 +11,7 @@ from google.appengine.ext import ndb
 from dateutil.parser import *
 import datetime
 
+import model.model_datastore as model
 
 #needed for retrieving the pubDate of a news post
 epoch = datetime.datetime.utcfromtimestamp(0)
@@ -257,7 +258,11 @@ def getNewsPosts(source_object, web_page_url, dict_IDF):
         #if there is an exception, we return and empty list of news posts
         return [], feedback
 
-
+def temp_news():
+	news={'url':'this_url','title':'oneone','dikt':{1:2,2:3} }
+	model.update('news',news,id='ova_id')
+	lis,c=model.list('news')
+	return lis
 
 def crawl_me_some_news(start=0, end=len(Utility.sources)):
 
