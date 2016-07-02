@@ -12,8 +12,14 @@ service google-fluentd restart &
 apt-get update
 apt-get install -yq \
     git build-essential supervisor python python-dev python-pip libffi-dev \
-    libssl-dev
+    libssl-dev unzip
+	
+	
+# For appengine 
+sudo wget -P /home/pythonapp https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.38.zip
 
+sudo unzip /home/pythonapp/google_appengine_1.9.38.zip -d /home/pythonapp
+export PYTHONPATH=$PYTHONPATH:/home/pythonapp/google_appengine/
 # Create a pythonapp user. The application will run as this user.
 useradd -m -d /home/pythonapp pythonapp
 
@@ -45,7 +51,7 @@ user=pythonapp
 # Environment variables ensure that the application runs inside of the
 # configured virtualenv.
 environment=VIRTUAL_ENV="/opt/app/env",PATH="/opt/app/env/bin",\
-    HOME="/home/pythonapp",USER="pythonapp"
+    HOME="/home/pythonapp",USER="pythonapp",PYTHONPATH="/home/pythonapp/google_appengine"
 stdout_logfile=syslog
 stderr_logfile=syslog
 EOF
