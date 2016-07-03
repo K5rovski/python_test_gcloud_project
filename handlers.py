@@ -53,6 +53,12 @@ def hello():
     """Return a friendly HTTP greeting."""
     return 'No te procupas, compadre!'
 
+@app.route('/test_git')
+def hello():
+    """Return a friendly HTTP greeting."""
+    return 'No te procupas, compadre!'
+
+
 
 @app.route('/test_datastore')
 def test_datastore():
