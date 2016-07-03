@@ -12,7 +12,7 @@ import json
 from flask import Flask
 from flask import  Response
 
-# import crawler
+import crawler2
 
 app = Flask(__name__)
 

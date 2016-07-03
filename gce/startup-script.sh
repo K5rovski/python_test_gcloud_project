@@ -30,6 +30,9 @@ export HOME=/root
 git config --global credential.helper gcloud.sh
 
 sudo rm -r /opt/app/*
+
+ls /opt/app
+
 git clone https://source.developers.google.com/p/$PROJECTID/r/newsreader /opt/app
 
 # Install app dependencies
