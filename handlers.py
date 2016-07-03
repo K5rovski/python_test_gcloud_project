@@ -58,6 +58,13 @@ def hello22():
     """Return a friendly HTTP greeting."""
     return 'this should be this No te procupas, compadre!'
 
+@app.route('/test_greet')
+def hello2232():
+    """Return a friendly HTTP greeting."""
+    retlis=crawler2.temp_greet()
+    return 'this here'+str(retlis)
+
+
 
 
 @app.route('/test_datastore')

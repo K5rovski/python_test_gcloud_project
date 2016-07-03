@@ -10,3 +10,6 @@ def temp_news():
     
 print temp_news()
 
+def temp_greet():
+    lis,c=model.list('Greeting')
+    return lis
