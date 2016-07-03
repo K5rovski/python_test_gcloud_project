@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from flask import current_app
 from gcloud import datastore
 
 
@@ -24,7 +23,7 @@ def init_app(app):
 
 
 def get_client():
-    return datastore.Client(current_app.config['PROJECT_ID'])
+    return datastore.Client('pythontestproject-1359')
 
 
 # [START from_datastore]

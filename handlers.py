@@ -17,9 +17,9 @@ import crawler2
 app = Flask(__name__)
 
 
-import config
+# import config
 
-app.config.from_object(config)
+# app.config.from_object(config)
 
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
@@ -42,7 +42,7 @@ from cPickle import Unpickler
 from urllib2 import URLError
 
 
-logging.basicConfig(filename="err.log",level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG)
 
 # import Utility
 
