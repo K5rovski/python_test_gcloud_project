@@ -42,7 +42,7 @@ from cPickle import Unpickler
 from urllib2 import URLError
 
 
-import Utility
+# import Utility
 
 # the class where we receive the requests
 
