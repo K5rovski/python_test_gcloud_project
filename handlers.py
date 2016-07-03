@@ -42,7 +42,7 @@ from cPickle import Unpickler
 from urllib2 import URLError
 
 
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
 
 # import Utility
 
@@ -60,9 +60,9 @@ def test_datastore():
         retlis=crawler2.temp_news()
         return 'this here'+str(retlis)
     except Exception as e:
-        logging.exception('Error: '+str(e)+" ")
-        print(e)
-        logging.debug("error: "+str(e))
+        # logging.exception('Error: '+str(e)+" ")
+        print('herte',e)
+        # logging.debug("error: "+str(e))
     return 'i am here'
 #----- checked -----
 # function that crawls the web-pages and extracts information
