@@ -29,7 +29,7 @@ pip install --upgrade pip virtualenv
 export HOME=/root
 git config --global credential.helper gcloud.sh
 
-sudo rm -r /opt/app
+sudo rm -r /opt/app/*
 git clone https://source.developers.google.com/p/$PROJECTID/r/newsreader /opt/app
 
 # Install app dependencies
