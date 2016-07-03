@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 import config
 
-# app.config.from_object(config)
+app.config.from_object(config)
 
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
@@ -42,7 +42,7 @@ from cPickle import Unpickler
 from urllib2 import URLError
 
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(filename="err.log",level=logging.DEBUG)
 
 # import Utility
 
@@ -58,10 +58,12 @@ def hello():
 def test_datastore():
     try:
         retlis=crawler2.temp_news()
-        return str(retlis)
+        return 'this here'+str(retlis)
     except Exception as e:
         logging.exception('Error: '+str(e)+" ")
-		logging.debug("error: "+str(e))
+        print(e)
+        logging.debug("error: "+str(e))
+    return 'i am here'
 #----- checked -----
 # function that crawls the web-pages and extracts information
 @app.route('/crawl_me_some_pages')
