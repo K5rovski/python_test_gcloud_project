@@ -12,7 +12,7 @@ import json
 from flask import Flask
 from flask import  Response
 
-import crawler
+import crawler2
 
 app = Flask(__name__)
 
@@ -54,7 +54,7 @@ def hello():
 
 @app.route('/test_datastore')
 def test_datastore():
-	retlis=crawler.temp_news()
+	retlis=crawler2.temp_news()
 	return str(retlis)
 #----- checked -----
 # function that crawls the web-pages and extracts information
