@@ -77,7 +77,10 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 EOF
 
+supervisorctl stop all
+
 supervisorctl reread
 supervisorctl update
 
+supervisorctl start pythonapp
 # Application should now be running under supervisor

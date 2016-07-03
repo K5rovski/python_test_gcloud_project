@@ -56,7 +56,7 @@ def hello():
 @app.route('/test_git')
 def hello22():
     """Return a friendly HTTP greeting."""
-    return 'test git,,,No te procupas, compadre!'
+    return 'this should be this No te procupas, compadre!'
 
 
 
