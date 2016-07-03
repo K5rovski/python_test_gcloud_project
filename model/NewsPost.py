@@ -1,6 +1,6 @@
 #encoding=utf-8
 
-from google.appengine.ext import ndb
+from google_app.appengine.ext import ndb
 import math
 from model import Source
 

@@ -6,7 +6,7 @@ from cPickle import Unpickler
 from bs4 import BeautifulSoup
 from model.NewsPost import NewsPost
 import Utility
-from google.appengine.ext import ndb
+from google_app.appengine.ext import ndb
 
 from dateutil.parser import *
 import datetime
