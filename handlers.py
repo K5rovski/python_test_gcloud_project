@@ -23,22 +23,22 @@ app.config.from_object(config)
 
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
-from machinelearning import naivebayes_classification, classification, clustering
-import  test_classifications
-from model.Cluster import Cluster
+# from machinelearning import naivebayes_classification, classification, clustering
+# import  test_classifications
+# from model.Cluster import Cluster
 
 from flask import request
-from model.NewsPostClient import  NewsPostClient
-from IDFModel import IDFModel
+# from model.NewsPostClient import  NewsPostClient
+# from IDFModel import IDFModel
 from flask import redirect
-from google.appengine.api import taskqueue
+# from google.appengine.api import taskqueue
 
 import  logging
 from bs4 import BeautifulSoup
 from urllib2 import urlopen
-from model.NewsPost import NewsPost
+# from model.NewsPost import NewsPost
 from cPickle import Unpickler
-from google.appengine.ext import ndb
+# from google.appengine.ext import ndb
 from urllib2 import URLError
 
 
