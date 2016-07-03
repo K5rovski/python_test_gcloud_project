@@ -56,6 +56,8 @@ def hello():
 
 @app.route('/test_datastore')
 def test_datastore():
+    print("here in test datastore")
+    sys.stdout.flush()
     try:
         retlis=crawler2.temp_news()
         return 'this here'+str(retlis)

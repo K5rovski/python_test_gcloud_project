@@ -18,9 +18,6 @@ apt-get install -yq \
 # Create a pythonapp user. The application will run as this user.
 useradd -m -d /home/pythonapp pythonapp
 
-# pip from apt is out of date, so make it update itself and install virtualenv.
-pip install --upgrade pip virtualenv
-
 
 
 
@@ -29,11 +26,25 @@ pip install --upgrade pip virtualenv
 export HOME=/root
 git config --global credential.helper gcloud.sh
 
-sudo rm -r /opt/app/*
 
-ls /opt/app
+
+ls /opt/app > /var/log/lsoptapp
+
+if [ -d /opt/app ] && [ "$(ls -A /opt/app)" ]; then
+
+git -C /opt/app pull
+echo ele > /var/log/inele
+
+else 
 
 git clone https://source.developers.google.com/p/$PROJECTID/r/newsreader /opt/app
+echo here > /var/log/inclone
+
+fi
+# pip from apt is out of date, so make it update itself and install virtualenv.
+pip install --upgrade pip virtualenv
+
+
 
 # Install app dependencies
 virtualenv /opt/app/env
