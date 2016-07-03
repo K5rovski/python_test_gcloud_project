@@ -7,3 +7,5 @@ def temp_news():
 	model.update('news',news)
 	lis,c=model.list('news')
 	return lis
+	
+print temp_news()	
